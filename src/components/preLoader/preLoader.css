@@ -1,0 +1,277 @@
+.preloader__wrapper {
+    width: 100vw;
+    height: 100vh;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+}
+
+#dark .preloader__wrapper {
+    background-color: var(--main-dark-background);
+    color: #ffffff;
+}
+
+#light .preloader__wrapper {
+    background-color: #fff;
+    color: #000;
+}
+
+.close__page {
+    height: 0 !important;
+    transition: height .1s ease-in;
+}
+
+.first__name {
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+}
+
+.first__name span {
+    display: inline-block;
+}
+
+.fi__H {
+    transform: translate(-25px, 10px);
+    animation: HAnim .5s infinite;
+}
+
+.fi__O {
+    transform: translate(-15px, -10px);
+    animation: OAnim .5s infinite;
+}
+
+.fi__S {
+    transform: translate(-5px, 10px);
+    animation: SAnim .5s infinite;
+}
+
+.fi__E {
+    transform: translate(5px, -10px);
+    animation: EAnim .5s infinite;
+}
+
+.fi__I {
+    transform: translate(15px, 10px);
+    animation: IAnim .5s infinite;
+}
+
+.fi__N {
+    transform: translate(25px, -10px);
+    animation: NAnim .5s infinite;
+}
+
+.last__name {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+}
+
+.last__name span {
+    display: inline-block;
+}
+
+.la__M {
+    transform: translate(-25px, 10px);
+    animation: MAnim .5s infinite;
+}
+
+.la__O {
+    transform: translate(-15px, -10px);
+    animation: LOAnim .5s infinite;
+}
+
+.la__R {
+    transform: translate(-5px, 10px);
+    animation: RAnim .5s infinite;
+}
+
+.la__A {
+    transform: translate(5px, -10px);
+    animation: AAnim .5s infinite;
+}
+
+.la__D {
+    transform: translate(15px, 10px);
+    animation: DAnim .5s infinite;
+}
+
+.la__I {
+    transform: translate(25px, -10px);
+    animation: LIAnim .5s infinite;
+}
+
+/* first name animations */
+
+@keyframes HAnim {
+    0% {
+        transform: translate(-25px, 10px);
+    }
+
+    50% {
+        transform: translate(-25px, -10px);
+    }
+
+    100% {
+        transform: translate(-25px, 10px);
+    }
+}
+
+@keyframes OAnim {
+    0% {
+        transform: translate(-15px, -10px);
+    }
+
+    50% {
+        transform: translate(-15px, 10px);
+    }
+
+    100% {
+        transform: translate(-15px, -10px);
+    }
+}
+
+@keyframes SAnim {
+    0% {
+        transform: translate(-5px, 10px);
+    }
+
+    50% {
+        transform: translate(-5px, -10px);
+    }
+
+    100% {
+        transform: translate(-5px, 10px);
+    }
+}
+
+@keyframes EAnim {
+    0% {
+        transform: translate(5px, -10px);
+    }
+
+    50% {
+        transform: translate(5px, 10px);
+    }
+
+    100% {
+        transform: translate(5px, -10px);
+    }
+}
+
+@keyframes IAnim {
+    0% {
+        transform: translate(15px, 10px);
+    }
+
+    50% {
+        transform: translate(15px, -10px);
+    }
+
+    100% {
+        transform: translate(15px, 10px);
+    }
+}
+
+@keyframes NAnim {
+    0% {
+        transform: translate(25px, -10px);
+    }
+
+    50% {
+        transform: translate(25px, 10px);
+    }
+
+    100% {
+        transform: translate(25px, -10px);
+    }
+}
+
+/* last name animations */
+
+@keyframes MAnim {
+    0% {
+        transform: translate(-25px, -10px);
+    }
+
+    50% {
+        transform: translate(-25px, 10px);
+    }
+
+    100% {
+        transform: translate(-25px, -10px);
+    }
+}
+
+@keyframes LOAnim {
+    0% {
+        transform: translate(-15px, 10px);
+    }
+
+    50% {
+        transform: translate(-15px, -10px);
+    }
+
+    100% {
+        transform: translate(-15px, 10px);
+    }
+}
+
+@keyframes RAnim {
+    0% {
+        transform: translate(-5px, -10px);
+    }
+
+    50% {
+        transform: translate(-5px, 10px);
+    }
+
+    100% {
+        transform: translate(-5px, -10px);
+    }
+}
+
+@keyframes AAnim {
+    0% {
+        transform: translate(5px, 10px);
+    }
+
+    50% {
+        transform: translate(5px, -10px);
+    }
+
+    100% {
+        transform: translate(5px, 10px);
+    }
+}
+
+@keyframes DAnim {
+    0% {
+        transform: translate(15px, -10px);
+    }
+
+    50% {
+        transform: translate(15px, 10px);
+    }
+
+    100% {
+        transform: translate(15px, -10px);
+    }
+}
+
+@keyframes LIAnim {
+    0% {
+        transform: translate(25px, 10px);
+    }
+
+    50% {
+        transform: translate(25px, -10px);
+    }
+
+    100% {
+        transform: translate(25px, 10px);
+    }
+}

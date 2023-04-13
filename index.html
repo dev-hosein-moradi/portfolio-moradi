@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="hosein moradi portfolio | Front-End Developer"
+    />
+    <meta name="author" content="Hosein Moradi" />
+    <meta
+      name="keywords"
+      content="Hosein, Moradi, portfolio, Hosein Moradi, Hosein Moradi Portfolio, https://devhosein.fun, Front-end developer, developer, frontend, web, hosein moradi developer, moboShare, mrAghrabeh"
+    />
+    <link rel="apple-touch-icon" href="public/logo.png" />
+
+    <link rel="manifest" href="./manifest.json" />
+
+    <title>Hosein moradi</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceworker.js")
+            .then((reg) => {
+              console.log("Success: ", reg.scope);
+            })
+            .catch((err) => {
+              console.log("Failure: ", err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

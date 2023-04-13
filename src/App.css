@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #191919;
+    font-family: 'Montserrat';
+}
+
+input,
+textarea,
+button,
+select,
+a,
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    letter-spacing: .01rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #c2b8da;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #810CA8;
+    cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #500369;
+}
+
+:root {
+    /* for handling height of screen dynamicly. */
+    --visual-height: 100%;
+
+    /* color pallete for dark theme */
+    --main-dark-background: #191919;
+    --second-dark-background: #3d3d3d;
+
+    --main-dark-color: #f5f5f5;
+    --second-dark-color: #c2b8da;
+    --third-dark-color: #a892cfa2;
+
+    --icon-dark-color: #BE95C4;
+
+    --first-btn-dark-background: #5E548E;
+    --second-btn-dark-background: #9F86C0;
+
+    --first-btn-dark-color: #000;
+
+    --first-borderColor-dark: #231942;
+    --second-borderColor-dark: #5E548E;
+
+    --first-boxShadow-dark-color: #231942;
+    --second-boxShadow-dark-color: #5E548E;
+
+    --main-light-background: #ffffff;
+    --second-light-background: #dbdbdb;
+
+    --main-light-color: #2D033B;
+    --second-light-color: #810CA8;
+    --third-light-color: #8071e2;
+}
+
+/* montserrat font */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+    font-display: auto;
+}
