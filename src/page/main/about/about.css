@@ -274,6 +274,7 @@
     font-weight: 500;
     display: flex;
     align-items: center;
+    font-family: 'DynaPuff', cursive;
 }
 
 #dark .course__cta a {
@@ -357,6 +358,7 @@
     font-weight: 500;
     display: flex;
     align-items: center;
+    font-family: 'DynaPuff', cursive;
 }
 
 #dark .certificate__cta a {

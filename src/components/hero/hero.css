@@ -241,7 +241,7 @@
     border-radius: 5rem;
 }
 
-strong {
+.hero__cta strong {
     z-index: 2;
     font-family: 'Montserrat';
     font-size: 1.9rem;

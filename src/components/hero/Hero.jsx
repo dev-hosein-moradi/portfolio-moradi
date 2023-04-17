@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./hero.css";
 import Hosein from "../../assets/image/hosein.webp";
+import Typed from "typed.js";
 
 const Hero = ({ scrollToTitle }) => {
+  const el = React.useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        "my work is developing interactive and user-friendly website and web application, from February 2021.",
+      ],
+      typeSpeed: 30,
+      loop: false,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   return (
     <div className="hero">
       {/* for image */}
@@ -30,10 +46,7 @@ const Hero = ({ scrollToTitle }) => {
             <span className="h3-tag">{"</h3>"}</span>
 
             <span className="p-tag">{"<p>"}</span>
-            <p>
-              my work is developing interactive and user-friendly website and
-              web application, from February 2021.
-            </p>
+            <p ref={el} />
             <span className="p-tag">{"</p>"}</span>
           </div>
           <span className="body-tag">{"</body>"}</span>
