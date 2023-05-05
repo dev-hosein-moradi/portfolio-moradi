@@ -151,7 +151,7 @@ const ContactMe = () => {
                   ? numberOfVisits
                       ?.toString()
                       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                  : 50}
+                  : 350}
               </p>
             </div>
           </div>

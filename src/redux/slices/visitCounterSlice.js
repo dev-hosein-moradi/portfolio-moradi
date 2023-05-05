@@ -17,6 +17,8 @@ const visitorCounting = createSlice({
   },
 });
 
+console.log(VISITOR_INITIAL_STATE);
+
 export const getNumOfVisitors = () => {
   return async (dispatch) => {
     const request = async () => {
