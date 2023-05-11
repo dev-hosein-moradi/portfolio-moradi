@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./hero.css";
 import Hosein from "../../assets/image/hosein.webp";
+import face from "../../assets/image/face.png";
 import Typed from "typed.js";
 
 const Hero = ({ scrollToTitle }) => {
@@ -24,7 +25,7 @@ const Hero = ({ scrollToTitle }) => {
       {/* for image */}
       <section className="hero__img">
         <div>
-          <img src={Hosein} alt="hosein moradi" />
+          <img src={face} alt="hosein moradi" />
         </div>
       </section>
 
