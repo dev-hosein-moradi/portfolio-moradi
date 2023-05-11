@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 .hero {
     padding: 100px 2% 0 2%;
 
@@ -149,6 +151,11 @@
     transform: translateX(0px);
 
     user-select: none;
+}
+
+.text__main h1 em {
+    font-weight: 400;
+    font-family: 'Monoton', cursive;
 }
 
 #dark .text__main h1 {

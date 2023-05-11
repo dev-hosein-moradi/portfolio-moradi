@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 
 const SvgHtml = lazy(() => import("../../../assets/SVGs/SvgHtml"));
 const SvgCss = lazy(() => import("../../../assets/SVGs/SvgCss"));
+const SvgTailwind = lazy(() => import("../../../assets/SVGs/SvgTailwind"));
 const SvgJs = lazy(() => import("../../../assets/SVGs/SvgJs"));
 const SvgReact = lazy(() => import("../../../assets/SVGs/SvgReact"));
 const SvgRedux = lazy(() => import("../../../assets/SVGs/SvgRedux"));
@@ -282,6 +283,9 @@ const About = () => {
             </span>
             <span>
               <SvgCss />
+            </span>
+            <span>
+              <SvgTailwind width={35} heigth={35} />
             </span>
             <span>
               <SvgJs />

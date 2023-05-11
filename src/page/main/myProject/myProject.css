@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@600;900&display=swap');
 
 .myProject {
     z-index: 2;
@@ -105,7 +106,7 @@
 .project__desc ul {
     width: 85%;
     margin: 0 auto;
-    font-family: 'DynaPuff', cursive;
+    font-family: 'Merienda', cursive;
 }
 
 .project__desc li {
@@ -114,16 +115,20 @@
 
     list-style-type: square;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 1.9px;
 }
 
+.project__desc li strong {
+    font-family: 'DynaPuff', cursive;
+}
 
-#dark .project__desc p {
+
+#dark .project__desc li {
     color: var(--third-dark-color);
 }
 
-#light .project__desc p {
+#light .project__desc li {
     color: var(--third-light-color);
 }
 

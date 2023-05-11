@@ -39,7 +39,7 @@ const Hero = ({ scrollToTitle }) => {
             <span className="h6-tag">{"</h6>"}</span>
 
             <span className="h1-tag">{"<h1>"}</span>
-            <h1>I'm Hosein,</h1>
+            <h1>I'm <em>Hosein</em> ,</h1>
             <span className="h1-tag">{"</h1>"}</span>
 
             <span className="h3-tag">{"<h3>"}</span>
