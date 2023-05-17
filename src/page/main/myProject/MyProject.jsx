@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import moboShare from "../../../assets/image/moboShare.webp";
 import mrAghrabeh from "../../../assets/image/mrAghrabeh.webp";
 import dataFinance from "../../../assets/image/dataFinance.webp";
+import tarkhineh from "../../../assets/image/tarkhineh.webp";
 const SvgReact = lazy(() => import("../../../assets/SVGs/SvgReact"));
 const SvgRedux = lazy(() => import("../../../assets/SVGs/SvgRedux"));
 const SvgSocket = lazy(() => import("../../../assets/SVGs/SvgSocket"));
@@ -33,6 +34,61 @@ const MyProject = () => {
       </h1>
 
       <section className="box__wrapper">
+        {/* box for tarkhine */}
+        <div
+          className="project__box"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="101"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+        >
+          <div className="project__image">
+            <img src={tarkhineh} alt="mobo share" />
+          </div>
+
+          <div className="project__desc">
+            <ul>
+              <li>
+                <p className="success">in development</p>
+              </li>
+              <li>Chain restaurant management website</li>
+
+              <li>
+                Use <strong>Tailwind</strong>
+              </li>
+
+              <li>
+                Focus on <strong>Clean Code</strong>
+              </li>
+
+              <li>Focus on animation skills</li>
+
+              <li>Attractive UI implementation example</li>
+            </ul>
+          </div>
+
+          <div className="project__technolegies">
+            <span>
+              <SvgReact />
+            </span>
+
+            <span>
+              <SvgTailwind width={35} height={38} />
+            </span>
+          </div>
+
+          <div className="project__cta">
+            <a
+              target={"_blank"}
+              rel="noreferrer"
+              href="https://tarkhineh-food.vercel.app/"
+            >
+              View Demo <SvgLink />
+            </a>
+          </div>
+        </div>
+
         {/* box for moboShare */}
         <div
           className="project__box"
@@ -47,15 +103,11 @@ const MyProject = () => {
           </div>
 
           <div className="project__desc">
-            {/* <p>
-              Moboshare is a social network website that developed by react Js.
-              users can follow their friends, post their events and real-time
-              chat. this is a MERN stack applications.
-            </p> */}
             <ul>
+              <li>
+                <p className="failur">Down for repairs</p>
+              </li>
               <li>social media platform</li>
-
-              <li>In development</li>
 
               <li>
                 Use <strong>Redux & Redux-toolkit</strong> for state management

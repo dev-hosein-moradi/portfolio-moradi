@@ -265,16 +265,15 @@
 }
 
 .course__cta {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 1.5rem 0;
 }
 
 .course__cta a {
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: 300;
     display: flex;
     align-items: center;
-    font-family: 'DynaPuff', cursive;
 }
 
 #dark .course__cta a {
@@ -349,16 +348,15 @@
 }
 
 .certificate__cta {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 1.5rem 0;
 }
 
 .certificate__cta a {
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: 300;
     display: flex;
     align-items: center;
-    font-family: 'DynaPuff', cursive;
 }
 
 #dark .certificate__cta a {
