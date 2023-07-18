@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./hero.css";
-import Hosein from "../../assets/image/hosein.webp";
+import { motion } from "framer-motion";
 import face from "../../assets/image/face.png";
 import Typed from "typed.js";
 
 const Hero = ({ scrollToTitle }) => {
-  const el = React.useRef(null);
+  const el = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -20,12 +20,19 @@ const Hero = ({ scrollToTitle }) => {
       typed.destroy();
     };
   }, []);
+
   return (
     <div className="hero">
       {/* for image */}
       <section className="hero__img">
         <div>
-          <img src={face} alt="hosein moradi" />
+          <motion.div
+            initial={{ opacity: 0, x: "100%" }}
+            transition={{ duration: 0.8 }}
+            whileInView={{ opacity: 1, x: 0 }}
+          >
+            <img src={face} alt="hosein moradi" />
+          </motion.div>
         </div>
       </section>
 
@@ -39,7 +46,9 @@ const Hero = ({ scrollToTitle }) => {
             <span className="h6-tag">{"</h6>"}</span>
 
             <span className="h1-tag">{"<h1>"}</span>
-            <h1>I'm <em>Hosein</em> ,</h1>
+            <h1>
+              I'm <em>Hosein</em> ,
+            </h1>
             <span className="h1-tag">{"</h1>"}</span>
 
             <span className="h3-tag">{"<h3>"}</span>
@@ -55,21 +64,27 @@ const Hero = ({ scrollToTitle }) => {
       </section>
 
       {/* cta to go next section */}
-      <button
-        onClick={() => scrollToTitle("contact")}
-        type="button"
-        className="hero__cta"
+      <motion.div
+        initial={{ opacity: 0, x: "100%" }}
+        transition={{ duration: 0.8 }}
+        whileInView={{ opacity: 1, x: 0 }}
       >
-        <strong>HIRE ME</strong>
-        <div id="container-stars">
-          <div id="stars"></div>
-        </div>
+        <button
+          onClick={() => scrollToTitle("contact")}
+          type="button"
+          className="hero__cta"
+        >
+          <strong>HIRE ME</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
 
-        <div id="glow">
-          <div className="circle"></div>
-          <div className="circle"></div>
-        </div>
-      </button>
+          <div id="glow">
+            <div className="circle"></div>
+            <div className="circle"></div>
+          </div>
+        </button>
+      </motion.div>
     </div>
   );
 };

@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat';
+
+    overflow-x: hidden;
 }
 
 .hero__img {
@@ -16,10 +18,10 @@
     display: flex;
     justify-content: right;
 
-    animation: heroImg .2s 1;
+    /* animation: heroImg .2s 1; */
 }
 
-@keyframes heroImg {
+/* @keyframes heroImg {
     from {
         opacity: 0;
     }
@@ -27,7 +29,7 @@
     to {
         opacity: 1;
     }
-}
+} */
 
 .hero__img div {
     width: 200px;
