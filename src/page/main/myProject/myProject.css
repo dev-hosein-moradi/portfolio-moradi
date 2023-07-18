@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@600;900&display=swap');
-
 .myProject {
     z-index: 2;
     color: #ffff;
@@ -54,120 +51,103 @@
     row-gap: 1rem;
 }
 
-.project__box {
+.card__box {
     width: 342px;
-    height: fit-content;
+    height: 350px;
     max-height: 570px;
     margin: 1.5rem 0;
     padding-bottom: .5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     border-radius: 5px;
     border: 1px solid var(--first-borderColor-dark);
     box-shadow: 0px 0px 30px -10px var(--first-boxShadow-dark-color);
     backdrop-filter: blur(4px);
 }
 
-#dark .project__box {
+#dark .card__box {
     background: rgba(255, 255, 255, 0.048);
 }
 
-#light .project__box {
+#light .card__box {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.project__image {
+.card__image {
     width: 340px;
     height: 170px;
+    max-height: 170px;
     border-radius: 5px 5px 0 0;
-}
-
-.project__image img {
-    width: 100%;
-    height: 100%;
     border-radius: 5px 5px 0 0;
     object-fit: fill;
 }
 
-.project__desc {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.project__desc p {
-    font-size: 1.6rem;
-    font-weight: 500;
+.card__name {
+    font-size: 1.9rem;
+    font-weight: 700;
     letter-spacing: .5px;
-    line-height: 1.3;
-    padding: .5rem;
-    word-break: normal;
+    padding: 1rem 2rem;
+    align-self: flex-start;
 }
 
-.failur {
-    color: rgb(221, 57, 57);
-}
-
-.success{
-    color: rgb(62, 204, 62);
-}
-
-.project__desc ul {
-    width: 85%;
-    margin: 0 auto;
-    font-family: 'Merienda', cursive;
-}
-
-.project__desc li {
-    width: 100%;
-    margin: .5rem 0;
-
-    list-style-type: square;
+.card__title {
     font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 1.9px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    padding: 0rem 2rem;
+    width: 100%;
 }
 
-.project__desc li strong {
-    font-family: 'DynaPuff', cursive;
-}
-
-#dark .project__desc li {
+#dark .card__title {
     color: #c4c4c4;
 }
 
-#light .project__desc li {
+#light .card__title {
     color: var(--third-light-color);
 }
 
-.project__technolegies {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: .5rem 0;
+.failure {
+    color: rgb(221, 57, 57);
 }
 
-.project__cta {
+.success {
+    color: rgb(62, 204, 62);
+}
+
+.development {}
+
+.card__status {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__status p {
     font-size: 1.5rem;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
+    align-self: flex-start;
 }
 
-.project__cta a {
-    letter-spacing: 2px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    font-family: 'DynaPuff', cursive;
+#dark .card__status p {
+    color: #c4c4c4;
 }
 
-#dark .project__cta a {
-    color: var(--main-dark-color);
+#light .card__status p {
+    color: var(--third-light-color);
 }
 
-#light .project__cta a {
-    color: var(--main-light-color);
+.card__btn {
+    width: 150px;
+    height: 35px;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: var(--second-dark-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
 }

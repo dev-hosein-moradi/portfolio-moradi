@@ -2,11 +2,14 @@ import React, { lazy, useEffect } from "react";
 import "./myProject.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 import moboShare from "../../../assets/image/moboShare.webp";
 import mrAghrabeh from "../../../assets/image/mrAghrabeh.webp";
 import dataFinance from "../../../assets/image/dataFinance.webp";
 import tarkhineh from "../../../assets/image/tarkhineh.webp";
+import { myProjects } from "../../../data";
+import ProjectsCard from "../../../components/projectsCard/ProjectsCard";
 const SvgReact = lazy(() => import("../../../assets/SVGs/SvgReact"));
 const SvgRedux = lazy(() => import("../../../assets/SVGs/SvgRedux"));
 const SvgSocket = lazy(() => import("../../../assets/SVGs/SvgSocket"));
@@ -34,10 +37,27 @@ const MyProject = () => {
       </h1>
 
       <section className="box__wrapper">
+        {myProjects?.map((project, i) => {
+          if (project?.lang === "en") {
+            return (
+              <div
+                key={project?.id}
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="101"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+              >
+                <ProjectsCard project={project} key={project?.id} />
+              </div>
+            );
+          }
+        })}
+
         {/* box for tarkhine */}
-        <div
+        {/* <div
           className="project__box"
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-offset="200"
           data-aos-delay="101"
           data-aos-duration="500"
@@ -87,10 +107,10 @@ const MyProject = () => {
               View Demo <SvgLink />
             </a>
           </div>
-        </div>
+        </div> */}
 
         {/* box for moboShare */}
-        <div
+        {/* <div
           className="project__box"
           data-aos="fade-up"
           data-aos-offset="200"
@@ -164,10 +184,10 @@ const MyProject = () => {
               View Demo <SvgLink />
             </a>
           </div>
-        </div>
+        </div> */}
 
         {/* box for mr aghrabeh */}
-        <div
+        {/* <div
           className="project__box"
           data-aos="fade-up"
           data-aos-offset="200"
@@ -180,11 +200,7 @@ const MyProject = () => {
           </div>
 
           <div className="project__desc">
-            {/* <p>
-              Mr Aghrabeh is a shopify platform for sells watch. in this project
-              i focused on UI, Animations and Clean Code to show my skills in
-              this field.
-            </p> */}
+            
             <ul>
               <li>shopify web site for wrist and wall watch</li>
 
@@ -215,10 +231,10 @@ const MyProject = () => {
               View Demo <SvgLink />
             </a>
           </div>
-        </div>
+        </div> */}
 
         {/* box for data finance */}
-        <div
+        {/* <div
           className="project__box"
           data-aos="fade-up"
           data-aos-offset="200"
@@ -267,7 +283,7 @@ const MyProject = () => {
               View Demo <SvgLink />
             </a>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );

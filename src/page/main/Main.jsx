@@ -10,11 +10,11 @@ const Main = () => {
       {/* Home section */}
       <Home />
 
-      {/* About me section */}
-      <About />
-
       {/* my project section */}
       <MyProject />
+
+      {/* About me section */}
+      <About />
 
       {/* Contact me section */}
       <ContactMe />
