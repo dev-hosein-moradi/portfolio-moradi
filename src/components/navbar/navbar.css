@@ -1,17 +1,17 @@
 .navbar {
     width: 100%;
-    min-height: 4rem;
+    height: 12rem;
 
-    padding: 1rem 2%;
+    padding: .5rem 2%;
     margin: 0;
 
     display: flex;
     flex-direction: row;
-
+    align-items: flex-start;
 }
 
 .navbar__links {
-    width: 60%;
+    width: 70%;
 
     display: flex;
     align-items: center;
@@ -22,20 +22,17 @@
 .links__items {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    font-family: 'Montserrat';
 
     position: absolute;
-    top: 20px;
     left: 0;
-
-    height: 100px;
-    max-height: 100px;
-    font-family: 'Montserrat';
+    top: 5px;
 }
 
 .links__items li {
-    margin: 0 .2rem;
-    width: 130px;
+    margin: 0 .5rem;
+    width: max-content;
     height: 35px;
     max-height: 35px;
 
@@ -49,7 +46,6 @@
     font-weight: 700;
 
     cursor: pointer;
-    transform: translateX(0px);
 
     user-select: none;
 }
@@ -72,11 +68,12 @@
 }
 
 .navbar__tools {
-    width: 40%;
+    width: 30%;
 
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    padding-top: 1rem;
 }
 
 .tools__theme {
@@ -168,5 +165,18 @@ input:checked+.slider::after {
     to {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 450px) {
+    .navbar {
+        height: 4rem;
+    }
+
+    .links__items{
+        position: unset;
+        flex-direction: row;
+        padding-top: 1rem;
     }
 }

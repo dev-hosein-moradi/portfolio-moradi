@@ -1,35 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 .hero {
-    padding: 100px 2% 0 2%;
+    padding: 20px 2% 0 2%;
 
-    width: 98%;
-    height: fit-content;
+    width: 100%;
+    height: 110dvh;
 
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat';
 
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .hero__img {
     width: 100%;
     display: flex;
     justify-content: right;
-
-    /* animation: heroImg .2s 1; */
 }
-
-/* @keyframes heroImg {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-} */
 
 .hero__img div {
     width: 200px;
@@ -416,7 +405,7 @@
 @media only screen and (min-width: 600px) {
 
     .hero {
-        max-height: 580px;
+        padding: 50px 2% 0 2%;
     }
 
     .hero__text {

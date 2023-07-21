@@ -1,9 +1,8 @@
 .home {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     font-family: 'Montserrat';
 
-    padding: 0 1%;
 }
 
 #dark .home {

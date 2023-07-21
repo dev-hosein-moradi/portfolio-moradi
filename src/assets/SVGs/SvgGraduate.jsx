@@ -1,10 +1,9 @@
 import React from "react";
 
-const SvgGraduate = () => {
+const SvgGraduate = (props) => {
   return (
     <svg
-      width="35"
-      height="35"
+     {...props}
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

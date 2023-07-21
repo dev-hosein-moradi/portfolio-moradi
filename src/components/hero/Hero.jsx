@@ -2,37 +2,29 @@ import React, { useEffect, useRef, useState } from "react";
 import "./hero.css";
 import { motion } from "framer-motion";
 import face from "../../assets/image/face.png";
-import Typed from "typed.js";
+// import Typed from "typed.js";
 
 const Hero = ({ scrollToTitle }) => {
-  const el = useRef(null);
+  // const el = useRef(null);
 
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: [
-        "my work is developing interactive and user-friendly website and web application, from February 2021.",
-      ],
-      typeSpeed: 30,
-      loop: false,
-    });
+  // useEffect(() => {
+  //   const typed = new Typed(el.current, {
+  //     strings: [""],
+  //     typeSpeed: 10,
+  //     loop: false,
+  //   });
 
-    return () => {
-      typed.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     typed.destroy();
+  //   };
+  // }, []);
 
   return (
     <div className="hero">
       {/* for image */}
       <section className="hero__img">
         <div>
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            transition={{ duration: 0.8 }}
-            whileInView={{ opacity: 1, x: 0 }}
-          >
-            <img src={face} alt="hosein moradi" />
-          </motion.div>
+          <img src={face} alt="hosein moradi" />
         </div>
       </section>
 
@@ -42,12 +34,12 @@ const Hero = ({ scrollToTitle }) => {
           <span className="body-tag">{"<body>"}</span>
           <div className="text__main">
             <span className="h6-tag">{"<h6>"}</span>
-            <h6>Hi,</h6>
+            <h6>Hi</h6>
             <span className="h6-tag">{"</h6>"}</span>
 
             <span className="h1-tag">{"<h1>"}</span>
             <h1>
-              I'm <em>Hosein</em> ,
+              I'm <em>Hosein</em>
             </h1>
             <span className="h1-tag">{"</h1>"}</span>
 
@@ -56,7 +48,10 @@ const Hero = ({ scrollToTitle }) => {
             <span className="h3-tag">{"</h3>"}</span>
 
             <span className="p-tag">{"<p>"}</span>
-            <p ref={el} />
+            <p>
+              my work is developing interactive and user-friendly website and
+              web application, from February 2021.
+            </p>
             <span className="p-tag">{"</p>"}</span>
           </div>
           <span className="body-tag">{"</body>"}</span>
@@ -64,27 +59,22 @@ const Hero = ({ scrollToTitle }) => {
       </section>
 
       {/* cta to go next section */}
-      <motion.div
-        initial={{ opacity: 0, x: "100%" }}
-        transition={{ duration: 0.8 }}
-        whileInView={{ opacity: 1, x: 0 }}
-      >
-        <button
-          onClick={() => scrollToTitle("contact")}
-          type="button"
-          className="hero__cta"
-        >
-          <strong>HIRE ME</strong>
-          <div id="container-stars">
-            <div id="stars"></div>
-          </div>
 
-          <div id="glow">
-            <div className="circle"></div>
-            <div className="circle"></div>
-          </div>
-        </button>
-      </motion.div>
+      <button
+        onClick={() => scrollToTitle("contact")}
+        type="button"
+        className="hero__cta"
+      >
+        <strong>HIRE ME</strong>
+        <div id="container-stars">
+          <div id="stars"></div>
+        </div>
+
+        <div id="glow">
+          <div className="circle"></div>
+          <div className="circle"></div>
+        </div>
+      </button>
     </div>
   );
 };
