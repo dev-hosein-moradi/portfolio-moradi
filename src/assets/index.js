@@ -1,7 +1,8 @@
-import web from "./web.png";
+import logo from "./logo.svg";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import person from "./person.jpg";
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -12,10 +13,20 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import socket from "./tech/socket.png";
+import typescript from "./tech/typescript.png";
+import next from "./tech/next.jpg";
+
+import company from "./logo.svg";
+
+import carrent from "./carrent.png";
+import tarkhineh from "./tarkhineh.webp";
+import moboshare from "./moboshare.webp";
+import mrAghrabeh from "./mrAghrabeh.webp";
+import dataFinance from "./dataFinance.webp";
 
 export {
-  web,
+  logo,
+  company,
   github,
   menu,
   close,
@@ -28,5 +39,12 @@ export {
   reactjs,
   redux,
   tailwind,
-  socket,
+  typescript,
+  carrent,
+  tarkhineh,
+  moboshare,
+  mrAghrabeh,
+  dataFinance,
+  person,
+  next,
 };

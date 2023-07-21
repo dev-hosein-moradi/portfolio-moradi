@@ -1,5 +1,6 @@
 import {
   javascript,
+  typescript,
   html,
   css,
   reactjs,
@@ -8,23 +9,30 @@ import {
   nodejs,
   mongodb,
   git,
-  socket,
+  carrent,
+  person,
+  next,
+  company,
+  tarkhineh,
+  moboshare,
+  mrAghrabeh,
+  dataFinance,
 } from "../assets";
 
-// export const navLinks = [
-//   {
-//     id: "about",
-//     title: "About",
-//   },
-//   {
-//     id: "work",
-//     title: "Work",
-//   },
-//   {
-//     id: "contact",
-//     title: "Contact",
-//   },
-// ];
+export const navLinks = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "work",
+    title: "Work",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
 
 const technologies = [
   {
@@ -38,6 +46,10 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "React JS",
@@ -64,62 +76,62 @@ const technologies = [
     icon: git,
   },
   {
-    name: "socket",
-    icon: socket,
+    name: "Next Js",
+    icon: next,
   },
 ];
 
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: "starbucks",
+    company_name: "Madiar Mehr Mana",
+    icon: company,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "March 2022 - Sep 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
+      "Dive deep into the implementation UI.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: "tesla",
+    title: "React.js Developer",
+    company_name: "Noavaran",
+    icon: company,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Oct 2021 - Feb 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining web applications using React.js and other related technologies like Socket.io .",
+      "The main part of redux and UI implementation was my responsibility and I managed the tasks well.",
+      "Implementing responsive design and ensuring cross-browser compatibility with Tailwind css.",
+      "Deep implementation Redux",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: "shopify",
+    title: "React.js Developer",
+    company_name: "Rira Auto",
+    icon: company,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "ّFreelancer Team",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "CRM development for car showrooms to carry out buying, selling and leasing processes in Turkey and establishing easy communication between company managers and customers.",
+      "Working in a team of 5 people on two related websites. Interaction with designers and other developers.",
+      "Using WebSocket to create Real-Time communication between administrators to manage contracts and products.",
+      "My main work was in the field of UI implementation.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: "meta",
+    title: "React.js Developer",
+    company_name: "Soft Skin",
+    icon: company,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Freelancer Team",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Development of two websites related to cosmetics and health products. One related to intra-organizational communication and the other to manage communication between customers.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Very creative, fully responsive and modern UI implementation",
+      "I was working on Redux and TailwindCss implementation individually in a two-person team.",
     ],
   },
 ];
@@ -127,31 +139,52 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Cooperation with Hosein in various projects of the company helped a lot in the development of the company's symbol. Friendly and good at work.",
+    name: "amir rezaei",
+    designation: "Senior developer",
+    company: "madiar mehr mana",
+    image: person,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "I've never met a web developer who truly cares about their clients' success like Hosein does.",
+    name: "saman",
+    designation: "Freelance team leader",
+    company: "freelancer",
+    image: person,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+      "After the development of the website by Hosein, we are completely confident about the clean code of the project and this has increased the quality of our service by 50% !",
+    name: "kian mortazavi",
     designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    company: "noavaran",
+    image: person,
   },
 ];
 
 const projects = [
+  {
+    name: "tarkhineh",
+    description:
+      "web-based CRM for Chain restaurant. Easing the management of chain restaurants for managers.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tarkhineh,
+    source_code_link: "https://github.com/dev-hosein-moradi/tarkhineh-food",
+  },
   {
     name: "Car Rent",
     description:
@@ -170,92 +203,67 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "carrent",
-    source_code_link: "https://github.com/",
+    image: carrent,
+    source_code_link: "https://github.com/dev-hosein-moradi/MORENT",
   },
   {
-    name: "Job IT",
+    name: "MoboShare",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web-based platform that enables users to interact with each other in an attractive environment. They are given the possibility of Real-Time Chat and sharing of events.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "redux",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "mogodb",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "express",
         color: "pink-text-gradient",
       },
     ],
-    image: "jobit",
-    source_code_link: "https://github.com/",
+    image: moboshare,
+    source_code_link: "https://github.com/dev-hosein-moradi/moboshare",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "mr aghrabeh",
+    description: "web-based shopify platform to manage watch services",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
       },
       {
         name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: "tripguide",
-    source_code_link: "https://github.com/",
+    image: mrAghrabeh,
+    source_code_link: "https://github.com/dev-hosein-moradi/mr-aghrabeh",
+  },
+  {
+    name: "finance",
+    description:
+      "Data finance platform. focus on clean code, UI and responsive web design.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dataFinance,
+    source_code_link: "https://github.com/dev-hosein-moradi/data-finance",
   },
 ];
 
-const courses = [
-  {
-    name: "Responsive Web Design Certification",
-    company: "FreeCodeCamp",
-    courseUrl: "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
-  },
-  {
-    name: "JavaScript Algorithms and Data Structures Certification",
-    company: "FreeCodeCamp",
-    courseUrl:
-      "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
-  },
-  {
-    name: "React - The Complete Guide (incl Hooks, React Router, Redux)",
-    company: "Udemy",
-    courseUrl:
-      "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
-  },
-  {
-    name: "The Complete 2023 Web Development Bootcamp",
-    company: "Udemy",
-    courseUrl:
-      "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
-  },
-];
-
-const myCertificate = [
-  {
-    name: "JavaScript Algorithms and Data Structures Certification",
-    company: "FreeCodeCamp",
-    certUrl:
-      "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
-  },
-  {
-    name: "Responsive Web Design Certification",
-    company: "FreeCodeCamp",
-    certUrl:
-      "https://www.freecodecamp.org/certification/hoseinmoradi/responsive-web-design",
-  },
-];
-
-export { technologies, experiences, testimonials, projects, courses, myCertificate };
+export { technologies, experiences, testimonials, projects };

@@ -1,28 +1,36 @@
-import React, { lazy, Suspense } from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useSelector } from "react-redux";
-import PreLoader from "./components/preLoader/PreLoader";
+import { BrowserRouter } from "react-router-dom";
 
-const Main = lazy(() => import("./page/main/Main"));
-const NotFound = lazy(() => import("./page/not found/NotFound"));
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Hero,
+  Navbar,
+  Works,
+  StarsCanvas,
+  Notifications,
+} from "./components";
 
 const App = () => {
-  /* use redux for handle theme color */
-  const themeColor = useSelector((state) => state.theme.currentTheme);
-
   return (
-    <div className="App" id={themeColor}>
-      <Router>
-        <Suspense fallback={<PreLoader />}>
-          <Routes>
-            <Route exact path="/" element={<Main />} />
-
-            <Route path="/*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </Router>
-    </div>
+    <BrowserRouter>
+      <div className="relative z-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <Navbar />
+          <Hero />
+        </div>
+        <Notifications />
+        <About />
+        <Experience />
+        <Works />
+        <Feedbacks />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 };
 
