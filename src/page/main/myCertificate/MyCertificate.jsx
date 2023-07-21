@@ -22,18 +22,7 @@ const CertificateCard = ({ cert }) => {
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       icon={
-        <div
-          style={{
-            background: "rgb(35, 38, 49)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
-            borderRadius: "50%",
-            padding: "13px 14px",
-          }}
-        >
+        <div className="box__icon">
           <SvgAward />
         </div>
       }
