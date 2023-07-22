@@ -12,6 +12,7 @@ import {
   sendInternalPendingNotif,
   sendInternalSuccessNotif,
 } from "../redux/reducers/notificationSlice";
+import Notifications from "./notification/Notifications";
 
 const Contact = () => {
   const formRef = useRef();
@@ -99,10 +100,10 @@ const Contact = () => {
       );
   };
 
+  /* handle notifications  */
   useEffect(() => {
-    console.log(notification);
-    if (notification.id === "contactme") {
-    }
+    const funcName = "contactme";
+    Notifications({ funcName, notification });
   }, [notification]);
 
   return (

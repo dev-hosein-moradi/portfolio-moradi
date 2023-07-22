@@ -1,35 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
 
-import {
-  About,
-  Contact,
-  Experience,
-  Feedbacks,
-  Hero,
-  Navbar,
-  Works,
-  StarsCanvas,
-  Notifications,
-} from "./components";
+import { Toaster } from "react-hot-toast";
+import HomeWrapper from "./pages/home-page/HomeWrapper";
+import { Suspense } from "react";
+import PreLoader from "./pages/pre-laoder/PreLoader";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
-        </div>
-        <Notifications />
-        <About />
-        <Experience />
-        <Works />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
+      <Suspense fallback={<PreLoader />}>
+        <Toaster />
+        <HomeWrapper />
+      </Suspense>
     </BrowserRouter>
   );
 };

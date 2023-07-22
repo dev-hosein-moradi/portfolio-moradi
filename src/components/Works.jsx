@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -70,7 +70,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <Fragment>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>{en[2].work[0].subText}</p>
         <h2 className={`${styles.sectionHeadText}`}>
@@ -92,7 +92,7 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </Fragment>
   );
 };
 
