@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { useDispatch, useSelector } from "react-redux";
@@ -39,65 +38,67 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const pendingFormNotif = {
-      id: "contactme",
-      label: "submit email",
-      title: "Pending...",
-      message: "Please be patient!",
-      isPending: true,
-      isSuccess: false,
-      isError: false,
-    };
-    setLoading(true);
-    dispatch(sendInternalPendingNotif(pendingFormNotif));
+    if (form.name.length && form.email.length && form.message.length) {
+      const pendingFormNotif = {
+        id: "contactme",
+        label: "submit email",
+        title: "Pending...",
+        message: "Please be patient!",
+        isPending: true,
+        isSuccess: false,
+        isError: false,
+      };
+      setLoading(true);
+      dispatch(sendInternalPendingNotif(pendingFormNotif));
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Hosein Moradi",
-          from_email: form.email,
-          to_email: "moradih7379@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          const successFormNotif = {
-            id: "contactme",
-            label: "submit email",
-            title: "Successfully!",
-            message: "Thank you. I will get back to you as soon as possible.",
-            isPending: false,
-            isSuccess: true,
-            isError: false,
-          };
-          setLoading(false);
-          dispatch(sendInternalSuccessNotif(successFormNotif));
+      emailjs
+        .send(
+          import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+          {
+            from_name: form.name,
+            to_name: "Hosein Moradi",
+            from_email: form.email,
+            to_email: "moradih7379@gmail.com",
+            message: form.message,
+          },
+          import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          () => {
+            const successFormNotif = {
+              id: "contactme",
+              label: "submit email",
+              title: "Successfully!",
+              message: "Thank you. I will get back to you as soon as possible.",
+              isPending: false,
+              isSuccess: true,
+              isError: false,
+            };
+            setLoading(false);
+            dispatch(sendInternalSuccessNotif(successFormNotif));
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          const errorFormNotif = {
-            id: "contactme",
-            label: "submit email",
-            title: "Failure!",
-            message: "Ahh, something went wrong. Please try again.",
-            isPending: false,
-            isSuccess: false,
-            isError: true,
-          };
-          setLoading(false);
-          dispatch(sendInternalErrorNotif(errorFormNotif));
-        }
-      );
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            const errorFormNotif = {
+              id: "contactme",
+              label: "submit email",
+              title: "Failure!",
+              message: "Ahh, something went wrong. Please try again.",
+              isPending: false,
+              isSuccess: false,
+              isError: true,
+            };
+            setLoading(false);
+            dispatch(sendInternalErrorNotif(errorFormNotif));
+          }
+        );
+    }
   };
 
   /* handle notifications  */
@@ -127,6 +128,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
+              required
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
@@ -138,6 +140,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              required
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
@@ -149,6 +152,7 @@ const Contact = () => {
             <textarea
               rows={7}
               name="message"
+              required
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
@@ -168,9 +172,7 @@ const Contact = () => {
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
+      ></motion.div>
     </div>
   );
 };

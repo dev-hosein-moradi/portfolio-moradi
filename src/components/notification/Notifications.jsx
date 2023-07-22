@@ -4,7 +4,7 @@ const Notifications = ({ funcName, notification }) => {
   if (funcName === notification?.id) {
     if (notification?.isPending) {
       return toast.loading(`${notification?.title}, ${notification?.message}`, {
-        duration: 1500,
+        duration: 2000,
         position: "top-center",
         className: "",
         icon: "🤨",

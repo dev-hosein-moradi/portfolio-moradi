@@ -7,7 +7,6 @@ const Hero = lazy(() => import("../../components/Hero"));
 const Navbar = lazy(() => import("../../components/Navbar"));
 const Works = lazy(() => import("../../components/Works"));
 const Contact = lazy(() => import("../../components/Contact"));
-const StarsCanvas = lazy(() => import("../../components/canvas/Stars"));
 
 const HomeWrapper = () => {
   return (
@@ -23,7 +22,6 @@ const HomeWrapper = () => {
       <Feedbacks />
       <div className="relative z-0">
         <Contact />
-        <StarsCanvas />
       </div>
     </div>
   );
