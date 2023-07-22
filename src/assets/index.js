@@ -20,7 +20,7 @@ import company from "./logo.svg";
 
 import carrent from "./carrent.png";
 import tarkhineh from "./tarkhineh.webp";
-import moboshare from "./moboshare.webp";
+import moboshare from "./moboShare.webp";
 import mrAghrabeh from "./mrAghrabeh.webp";
 import dataFinance from "./dataFinance.webp";
 
