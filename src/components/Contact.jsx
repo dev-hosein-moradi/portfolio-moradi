@@ -13,6 +13,7 @@ import {
 } from "../redux/reducers/notificationSlice";
 import Notifications from "./notification/Notifications";
 
+
 const Contact = () => {
   const formRef = useRef();
   const dispatch = useDispatch();
@@ -169,10 +170,11 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      ></motion.div>
+      >
+      </motion.div> */}
     </div>
   );
 };

@@ -24,6 +24,8 @@ import moboshare from "./moboShare.webp";
 import mrAghrabeh from "./mrAghrabeh.webp";
 import dataFinance from "./dataFinance.webp";
 
+import moon from "./moon.jpg";
+
 export {
   logo,
   company,
@@ -47,4 +49,5 @@ export {
   dataFinance,
   person,
   next,
+  moon,
 };
